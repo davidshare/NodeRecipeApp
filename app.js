@@ -17,7 +17,7 @@ app.engine('dust', consolidate.dust);
 
 //Set default extension to .dust
 app.set('view engine', 'dust');
-app.set('views', __dirname + './views');
+app.set('views', __dirname + '/views');
 
 //set public filder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 
 app.get('/', (req, res)=>{
-	res.send('I got you now');
+	res.render('index');
 });
 
 app.listen(3000, ()=>{
