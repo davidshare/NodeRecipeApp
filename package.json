@@ -6,5 +6,11 @@
   "repository": "https://github.com/davidshare/NodeRecipeApp.git",
   "author": "David Essien <davidessienshare@gmail.com>",
   "license": "MIT",
-  "private": null
+  "scripts":{
+  	"start":"nodemon --exec babel-node app.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
 }
