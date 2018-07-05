@@ -1,0 +1,10 @@
+{
+  "name": "noderecipeapp",
+  "version": "1.0.0",
+  "description": "A simple Recipe App built with node.js based on a course by Brad Traversy",
+  "main": "app.js",
+  "repository": "https://github.com/davidshare/NodeRecipeApp.git",
+  "author": "David Essien <davidessienshare@gmail.com>",
+  "license": "MIT",
+  "private": null
+}
