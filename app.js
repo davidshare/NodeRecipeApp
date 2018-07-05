@@ -22,6 +22,10 @@ app.set('views', __dirname + './views');
 //set public filder
 app.use(express.static(path.join(__dirname, 'public')));
 
+//body parser middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
 
 app.get('/', (req, res)=>{
 	res.send('I got you now');
