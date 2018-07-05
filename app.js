@@ -8,6 +8,10 @@ import pg from 'pg';
 
 let app = express();
 
+//Create DB connection string
+//postgres://username:password@localhost/database;
+let conn = "postgres://knowshare:gemshare@localhost/recipebookdb";
+
 app.get('/', (req, res)=>{
 	res.send('I got you now');
 });
