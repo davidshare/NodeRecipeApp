@@ -12,6 +12,14 @@ let app = express();
 //postgres://username:password@localhost/database;
 let conn = "postgres://knowshare:gemshare@localhost/recipebookdb";
 
+//assign Dust Engine to .dust files
+app.engine('dust', consolidate.dust);
+
+//Set default extension to .dust
+app.set('view engine', 'dust');
+app.set('views', __dirname + './views');
+
+
 app.get('/', (req, res)=>{
 	res.send('I got you now');
 });
