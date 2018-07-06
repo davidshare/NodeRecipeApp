@@ -43,7 +43,7 @@ app.get('/', (req, res)=>{
 		}else{
 			res.render('index', {recipes: dbRes.rows});
 		}
-		client.end();
+		//client.end();
 	});
 });
 
