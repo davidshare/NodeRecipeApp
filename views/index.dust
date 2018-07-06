@@ -11,6 +11,10 @@
 		  		<br/>
 		  		<p><strong>Ingredients: </strong>{ingredients}</p>
 		  		<p><strong>Directions: </strong>{directions}</p>
+		  		<br/>
+		  		<hr/>
+		  		<button class="btn btn-light mr-5">Edit Recipe</button>
+		  		<button class="btn btn-danger">Delete Recipe</button>
 		  	</div>
 		</div>
 	{/recipes}
