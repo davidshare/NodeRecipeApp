@@ -2,8 +2,11 @@
 <html>
 <head>
 	<title>RecipeBook</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 </head>
 <body>
 	{+body /}
+	<script src="/js/jquery-slim.min.js"></script>
+	<script src="/js/bootstrap.js"></script>
 </body>
 </html>
