@@ -3,14 +3,22 @@ import path from 'path';
 import bodyParser from 'body-parser';
 import consolidate from 'consolidate';
 import dust from 'dustjs-helpers';
-import pg from 'pg';
+import {Client} from 'pg';
 
 
 let app = express();
 
 //Create DB connection string
 //postgres://username:password@localhost/database;
-let conn = "postgres://knowshare:gemshare@localhost/recipebookdb";
+// let conn = "postgresql://knowshare:gemshare@localhost:46713/recipebookdb";
+const client = new Client({
+	user: 'Knowshare',
+	host: 'localhost',
+	database: 'recipebookdb',
+	password: 'gemshare',
+	port: 3005
+});
+client.connect();
 
 //assign Dust Engine to .dust files
 app.engine('dust', consolidate.dust);
@@ -28,7 +36,18 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 
 app.get('/', (req, res)=>{
-	res.render('index');
+	console.log('i got here');
+	client.query('SELECT * from recipes', (dbErr, dbRes)=>{
+		if(dbErr){
+			console.log(dbErr);
+		}else{
+			res.render('index', {recipes: dbRes.rows});
+			console.log("********************\n\n\n\n\n", dbRes, "********************\n\n\n\n\n");
+			console.log(dbRes.rows);
+		}
+		client.end();
+	});
+	// res.render('index');
 });
 
 app.listen(3000, ()=>{
