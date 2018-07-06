@@ -1,6 +1,8 @@
 {>"layout" /}
 
 {<body}
+	<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#formModal">Add Recipe</button>
+	<br/>
 	{#recipes}
 		<div class="alert alert-primary">
 		  <h4>
