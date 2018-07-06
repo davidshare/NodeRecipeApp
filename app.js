@@ -42,12 +42,9 @@ app.get('/', (req, res)=>{
 			console.log(dbErr);
 		}else{
 			res.render('index', {recipes: dbRes.rows});
-			console.log("********************\n\n\n\n\n", dbRes, "********************\n\n\n\n\n");
-			console.log(dbRes.rows);
 		}
 		client.end();
 	});
-	// res.render('index');
 });
 
 app.listen(3000, ()=>{
