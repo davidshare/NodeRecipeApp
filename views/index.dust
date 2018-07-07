@@ -40,10 +40,14 @@
 	        	<label>Ingredients</label>
 	        	<textarea class="form-control" name="ingredients"></textarea>
 	        </div>
+	        <div class="form-group">
+	        	<label>Directions</label>
+	        	<textarea class="form-control" name="directions"></textarea>
+	        </div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
+	        <input type="submit" class="btn btn-primary" value="save" />
 	      </div>
 	    </div>
 	  </div>
