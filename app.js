@@ -47,6 +47,11 @@ app.get('/', (req, res)=>{
 	});
 });
 
+app.post('/add', (req, res)=>{
+	client.query("INSERT INTO recipes(name, ingredients, directions) VALUES ($1, $2, $3)", [req.body.name, req.body.ingredients, req.body.directions]);
+	res.redirect('/');
+});
+
 app.listen(3000, ()=>{
 	console.log('Server started on port 3000');
 });
