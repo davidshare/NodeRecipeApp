@@ -52,6 +52,11 @@ app.post('/add', (req, res)=>{
 	res.redirect('/');
 });
 
+app.delete('/delete/:id', (req, res)=>{
+	client.query("DELETE FROM recipes WHERE id=$1", [req.params.id]);
+	res.sendStatus(200);
+});
+
 app.listen(3000, ()=>{
 	console.log('Server started on port 3000');
 });
