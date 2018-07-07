@@ -16,7 +16,7 @@
 		  		<br/>
 		  		<hr/>
 		  		<button class="btn btn-light mr-5">Edit Recipe</button>
-		  		<button class="btn btn-danger">Delete Recipe</button>
+		  		<button class="btn btn-danger delete-recipe" data-id="{id}">Delete Recipe</button>
 		  	</div>
 		</div>
 	{/recipes}
