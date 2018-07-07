@@ -36,6 +36,10 @@
 	        	<label>Recipe</label>
 	        	<input type="text" class="form-control" name="name">
 	        </div>
+	        <div class="form-group">
+	        	<label>Ingredients</label>
+	        	<textarea class="form-control" name="ingredients"></textarea>
+	        </div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
