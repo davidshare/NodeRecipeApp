@@ -55,11 +55,12 @@
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	        <input type="submit" class="btn btn-primary" value="save" />
 	      </div>
+	  </form>
 	    </div>
 	  </div>
 	</div>
 
-	<div class="modal fade" id="editFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="editFormModal" tabindex="-1" role="dialog" aria-labelledby="editFormLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	    	<form method="post" action="/edit">
@@ -88,6 +89,7 @@
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	        <input type="submit" class="btn btn-primary" value="save" />
 	      </div>
+	  </form>
 	    </div>
 	  </div>
 	</div>
